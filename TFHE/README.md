@@ -1,5 +1,5 @@
-# TFHE-example
-Repository for research in Fully Homomorphic Encryption by TFHE
+# TFHE's introductory example
+TFHE is fully homomorphic encryption library by SPQlios team.
 
 # How to setup TFHE on Ubuntu
 sudo apt install build-essential cmake libgmp-dev

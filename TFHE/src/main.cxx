@@ -56,6 +56,7 @@ void saveSecretKey(
 }
 
 // Testing homomorphic encryption
+// Here public & cloud keys are generated
 void encrypt() {
 
     uint32_t seeds[] = { 987, 654, 321, 234, 567, 890, 777 };
