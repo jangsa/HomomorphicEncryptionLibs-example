@@ -1,3 +1,4 @@
-*.data
-*.key
-*.out
+**/*.data
+**/*.key
+**/*.out
+

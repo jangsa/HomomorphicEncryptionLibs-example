@@ -1,5 +1,5 @@
 # TFHE's introductory example
-TFHE is fully homomorphic encryption library by SPQlios team.
+[TFHE](https://tfhe.github.io/tfhe/) is fully homomorphic encryption library by SPQlios team.
 
 # How to setup TFHE on Ubuntu
 sudo apt install build-essential cmake libgmp-dev
@@ -15,6 +15,8 @@ cmake ../src
 make
 
 sudo make install
+
+sudo ldconfig
 
 g++ ./src/main.cxx -o ./main.out -ltfhe-nayuki-portable
 
