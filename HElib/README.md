@@ -16,9 +16,9 @@ sudo make install
 
 2.Install [NTL](http://www.shoup.net/ntl/)
 ```
-curl -O http://www.shoup.net/ntl/ntl-11.2.0.tar.gz
-tar zxf ./ntl-11.2.0.tar.gz 
-cd ntl-11.2.0/src
+curl -O http://www.shoup.net/ntl/ntl-11.2.1.tar.gz
+tar zxf ./ntl-11.2.1.tar.gz 
+cd ntl-11.2.1/src
 ./configure NTL_THREADS=on NTL_THREAD_BOOST=on NTL_EXCEPTIONS=on
 make
 sudo make install
@@ -28,11 +28,10 @@ sudo make install
 ```
 git clone https://github.com/shaih/HElib.git
 cd ./HElib/src
-make # this creates "fhe.a" in the current directory and that's what you application works with.
+make # This generates "fhe.a" in the current directory and that's what you application works with.
 ```
 
 4.Run test programs (optional)
--This runs into several errors right now@15th July 2018. [See the issue](https://github.com/shaih/HElib/issues/228)
 ```
 make check
 ```
