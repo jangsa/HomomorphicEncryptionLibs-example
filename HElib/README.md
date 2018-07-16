@@ -38,7 +38,8 @@ make check
 
 5.This is how to prepare your own program (Seems the build system is very immature at this moment@July 2018)
 ```
-vi myprog.cpp
-make myprog_x
+vi your_program_name.cpp
+make your_program_name_x
 ```
+*In this way, you can find a number of samples in the official repository. -> [example](https://github.com/shaih/HElib/blob/master/src/Test_General.cpp)
 
