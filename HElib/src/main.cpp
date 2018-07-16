@@ -20,22 +20,22 @@ int main() {
   long chosen_m = 0;
   long m = FindM(k, L, c, p, d, s, chosen_m, 0); // use specified value as modulus
 
-	FHEcontext context(m, p, r);
-	buildModChain(context, L, c);
+  FHEcontext context(m, p, r);
+  buildModChain(context, L, c);
 
   ZZX G = makeIrredPoly(p, d); // polynomial
 
   std::cout << "***configurations***\n"
-	          << ", p=" << p
-	          << ", r=" << r
-	          << ", d=" << d
-    	      << ", c=" << c
-	          << ", k=" << k
-	          << ", w=" << w
-    	      << ", L=" << L
-	          << ", m=" << m
-	          << ", G=" << G
-	          << endl;
+            << ", p=" << p
+            << ", r=" << r
+            << ", d=" << d
+            << ", c=" << c
+            << ", k=" << k
+            << ", w=" << w
+            << ", L=" << L
+            << ", m=" << m
+            << ", G=" << G
+            << endl;
 
   // generate keys
   FHESecKey secretKey(context);
@@ -50,17 +50,17 @@ int main() {
 
   // encrypt plaintexts
   Ctxt c0(publicKey), c1(publicKey), c2(publicKey);
-	publicKey.Encrypt(c0, to_ZZX(plaintextA));
-	publicKey.Encrypt(c1, to_ZZX(plaintextB));
-	publicKey.Encrypt(c2, to_ZZX(plaintextC));
-	
+  publicKey.Encrypt(c0, to_ZZX(plaintextA));
+  publicKey.Encrypt(c1, to_ZZX(plaintextB));
+  publicKey.Encrypt(c2, to_ZZX(plaintextC));
+  
   // do some computations
   // 1. addition
-	Ctxt cSum = c0; // holder of encrypted sum result
+  Ctxt cSum = c0; // holder of encrypted sum result
   ZZX pSum;       // holder of decrypted sum result
   cSum += c1;
   cSum += c2;
-	secretKey.Decrypt(pSum, cSum);
+  secretKey.Decrypt(pSum, cSum);
   std::cout << "addition result:" << pSum[0] << endl; // should print "777"
 
 }
