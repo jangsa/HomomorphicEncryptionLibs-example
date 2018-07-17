@@ -3,3 +3,19 @@
 
 # How to setup SEAL on Ubuntu
 
+1. Download [SEAL](https://www.microsoft.com/en-us/download/details.aspx?id=56202)
+
+2. Install
+```
+tar zxf SEAL_2.3.1.tar.gz && cd SEAL_2.3.1/SEAL
+cmake .
+make
+sudo make install
+cd ..
+```
+
+3. Run examples (optional)
+```
+```
+
+
